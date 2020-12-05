@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=">
+  <title>Volunteer Form</title>
+  
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+  
+  <!--  Styles  -->
+  <link rel="stylesheet" href="styles/form.css">
+  
+</head>
+<body>
+  <!-- For developer server <form enctype="multipart/form-data" method="post" action="my-file.aspx"> -->
+  <form method="post" name="web_design_github" data-netlify="true" netlify>
+    <fieldset>
+      <legend>Volunteer Form</legend>
+      
+      <!-- Full Name -->
+      <label for="full-name">Full Name:</label>
+      <input type="text" name="full_name" id="full-name" class="input" required />
+      
+      <!-- Age -->
+      <label for="age">Age:</label>
+      <input type ="number" name="age" id="age" class="input" min="16" max="120" />
+    
+      <!-- T-Shirt Size -->
+      <label for="t-shirt">T-Shirt Size:</label>
+      <select name="t_shirt" id="t-shirt" class="select">
+        <option>SELECT SIZE</option>
+        <option value="XS">XS</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+        <option value="XXL">XXL</option>
+        <option value="CUSTOM">CUSTOM</option>
+      </select>
+      <input type="text" name="custom" id="custom" class="input" placeholder="Custom Size" disabled />
+      <!-- T-Shirt Size end-->
+      
+      <!-- caniuse -->
+      <label for="email">Email:</label>
+      <input type="email" name="your_email" id="email" class="input" required />
+      
+      <label for="phone">Phone:</label> (optional)
+      <input type="tel" name="phone" id="phone" class="input" />
+      
+      <label for="url">Social Media URL:</label> (optional)
+      <input type="url" name="url" id="url" class="input" size="70" />
+      
+      <label for="date">When can you begin?:</label>
+      <input type="date" name="begin_date" id="date" class="input" required/>
+      
+      <label for="color">Color:</label>
+      <input type="color" name="color" id="color" class="input"/>
+      <!-- caniuse end -->
+      
+      <!-- Time of Day -->
+      <label for="time-of-day">Time of Day:</label><br />
+      <input type="checkbox" name="time_of_day" id="time-of-day" class="checkbox" value="Morning" required />
+      <span class="checkbox-text">Morning</span><br />
+      
+      <input type="checkbox" name="time_of_day" class="checkbox" value="Afternoon"/>
+      <span class="checkbox-text">Afternoon</span><br />
+      
+      <input type="checkbox" name="time_of_day" class="checkbox" value="Evening" />
+      <span class="checkbox-text">Evening</span><br /><br />
+      <!-- Time of Day end-->
+      
+      <!-- Veteran Radio-->
+      <label for=veteran>Are you a U.S. Veteran?</label><br />
+      <input type="radio" name="veteran" value="Yes" class="radio" required id="veteran"/>
+      <span class="radio-text">Yes</span>
+      
+      <input type="radio" name="veteran" value="No" class="radio" />
+      <span class="radio-text">No</span> <br /><br />
+      <!-- Veteran Radio end-->
+      
+      <!-- Upload Document -->
+      <label for="file">Background Check:</label> <br />
+      <input type="file" name="file" id="file" class="file" accept=".pdf" required/><br />
+      
+      <!-- Comments -->
+      <label for="about-you">Tell us about you:</label> (optional)</br />
+      <textarea name="comments" id="about-you" class="textarea" cols="70" rows="7"></textarea>
+      
+      <br /><br />
+      <input type="submit" class="submit" name="submit" value="Volunteer Now!" />
+      
+    </fieldset>
+  </form>
+
+  <!-- Scripts -->
+  <script src="scripts/form.js"></script>
+
+</body>
+</html>
